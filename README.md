@@ -88,7 +88,7 @@ This enterprise app template provides a **scalable, maintainable foundation** fo
 
 | Login Screen | Register Screen | Forgot Password |
 |:------------:|:---------------:|:---------------:|
-| ![Login](https://blob.v0.app/892d76fc-f950-4bda-a23f-b75bdd5f5284) | ![Register](https://blob.v0.app/31af6c87-251d-4dbf-9ddd-fa9df7c3d340) | ![Forgot Password](https://blob.v0.app/bf07f2cd-fb89-4b40-9ed5-0e7e9569d22b) |
+| ![Login](public/login.png) | ![Register](public/register.png) | ![Forgot Password](public/forgot-password.png) |
 
 *Clean, modern authentication screens with form validation and error handling*
 
@@ -99,7 +99,7 @@ This enterprise app template provides a **scalable, maintainable foundation** fo
 
 | Dashboard | Users Management | Settings |
 |:---------:|:----------------:|:--------:|
-| ![Dashboard](https://blob.v0.app/abb38b3a-77cd-4bd8-b705-112a3a599f7c) | ![Users](https://blob.v0.app/31af6c87-251d-4dbf-9ddd-fa9df7c3d340) | ![Settings](https://blob.v0.app/bf07f2cd-fb89-4b40-9ed5-0e7e9569d22b) |
+| ![Dashboard](public/dashboard.png) | ![Users](public/users.png) | ![Settings](public/settings.png) |
 
 *Feature-rich dashboard with charts, user management, and comprehensive settings*
 

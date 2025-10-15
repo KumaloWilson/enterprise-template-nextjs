@@ -179,8 +179,8 @@ enterprise-app-template/
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/yourusername/enterprise-app-template.git
-   cd enterprise-app-template
+   git clone https://github.com/KumaloWilson/enterprise-template-nextjs
+   cd enterprise-template-nextjs
    \`\`\`
 
 2. **Install dependencies**
@@ -407,7 +407,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Support
 
-For support, email support@example.com or open an issue on GitHub.
+For support, email kumalowilson900@gmail.com or open an issue on GitHub.
 
 ---
 
@@ -415,6 +415,6 @@ For support, email support@example.com or open an issue on GitHub.
 
 **[⬆ back to top](#-enterprise-app-template)**
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Your Name](https://github.com/KumaloWilson)
 
 </div>

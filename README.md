@@ -1,190 +1,420 @@
-Absolutely, Wilson — here’s a **professionally formatted `README.md`** for your **Enterprise App Template**, with clean Markdown structure, headings, emoji icons, and screenshot placeholders (you can later replace them with your actual image links).
+<div align="center">
 
----
-
-```markdown
 # 🚀 Enterprise App Template
 
-A **production-ready enterprise application template** built with **Next.js**, **TypeScript**, and **modern best practices** — designed for scalability, modularity, and performance.
+**A production-ready, modular enterprise application template built with Next.js 15, TypeScript, and modern best practices.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+
+[Features](#-features) • [Screenshots](#-screenshots) • [Getting Started](#-getting-started) • [Architecture](#-architecture) • [Documentation](#-documentation)
+
+</div>
 
 ---
 
-## 🌟 Features
+## 📋 Table of Contents
 
-✅ **Modular Architecture** – Clean separation of concerns using a well-defined module pattern  
-🔐 **Authentication Flow** – Login, register, and password reset screens  
-🧭 **Responsive Sidebar** – Collapsible, intuitive navigation for large-scale apps  
-📊 **Modern Dashboard** – Beautiful charts, real-time metrics, and analytics  
-🌓 **Dark Mode** – Built-in theme switching  
-💪 **Type-Safe Codebase** – Full TypeScript support  
-🎨 **Tailwind CSS + shadcn/ui** – Utility-first design with enterprise-grade components  
-⚡ **Scalable & Maintainable** – Built with best practices for large teams and production use  
+- [Overview](#-overview)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Architecture](#-architecture)
+- [Module Pattern](#-module-pattern)
+- [Available Scripts](#-available-scripts)
+- [Tech Stack](#-tech-stack)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 Overview
+
+This enterprise app template provides a **scalable, maintainable foundation** for building large-scale applications. It follows industry best practices with a modular architecture that separates concerns and promotes code reusability.
+
+**Perfect for:**
+- SaaS applications
+- Admin dashboards
+- Internal tools
+- Enterprise web applications
+- Multi-tenant platforms
+
+---
+
+## ✨ Features
+
+### 🏗️ Architecture
+- **Modular Design** – Clean separation with `modules/` folder structure
+- **Type-Safe** – Full TypeScript support with strict mode
+- **Scalable** – Built to handle growth from MVP to enterprise scale
+- **Maintainable** – Clear patterns and conventions for team collaboration
+
+### 🔐 Authentication
+- Complete auth flow (Login, Register, Forgot Password)
+- Protected routes with middleware
+- Session management with React Context
+- Form validation and error handling
+
+### 🎨 UI/UX
+- **Responsive Design** – Mobile-first approach
+- **Dark Mode** – Built-in theme switching
+- **Modern Components** – shadcn/ui component library
+- **Collapsible Sidebar** – Intuitive navigation for complex apps
+- **Beautiful Dashboard** – Charts, metrics, and data visualization
+
+### 📊 Dashboard Features
+- Real-time metrics and KPIs
+- Interactive charts (Area, Bar, Line)
+- Transaction history
+- Activity tracking
+- Responsive grid layout
+
+### 🛠️ Developer Experience
+- Hot reload and fast refresh
+- ESLint and Prettier configured
+- TypeScript path aliases
+- Consistent code structure
+- Comprehensive documentation
 
 ---
 
 ## 🖼️ Screenshots
 
-> Replace the `assets/screenshots/*.png` paths with your actual screenshots.
+### Authentication Flow
+<div align="center">
 
-| Dashboard | Authentication | Sidebar |
-|------------|----------------|----------|
-| ![Dashboard](assets/screenshots/dashboard.png) | ![Login](assets/screenshots/login.png) | ![Sidebar](assets/screenshots/sidebar.png) |
+| Login Screen | Register Screen | Forgot Password |
+|:------------:|:---------------:|:---------------:|
+| ![Login](https://blob.v0.app/892d76fc-f950-4bda-a23f-b75bdd5f5284) | ![Register](https://blob.v0.app/31af6c87-251d-4dbf-9ddd-fa9df7c3d340) | ![Forgot Password](https://blob.v0.app/bf07f2cd-fb89-4b40-9ed5-0e7e9569d22b) |
+
+*Clean, modern authentication screens with form validation and error handling*
+
+</div>
+
+### Main Application
+<div align="center">
+
+| Dashboard | Users Management | Settings |
+|:---------:|:----------------:|:--------:|
+| ![Dashboard](https://blob.v0.app/abb38b3a-77cd-4bd8-b705-112a3a599f7c) | ![Users](https://blob.v0.app/31af6c87-251d-4dbf-9ddd-fa9df7c3d340) | ![Settings](https://blob.v0.app/bf07f2cd-fb89-4b40-9ed5-0e7e9569d22b) |
+
+*Feature-rich dashboard with charts, user management, and comprehensive settings*
+
+</div>
 
 ---
 
 ## 📂 Project Structure
 
-```
-
-├── app/
-│   ├── (app)/              # Protected app routes
-│   │   ├── dashboard/
-│   │   ├── users/
-│   │   ├── settings/
-│   │   └── layout.tsx      # App layout with sidebar
-│   ├── auth/               # Authentication routes
+\`\`\`
+enterprise-app-template/
+├── app/                          # Next.js App Router
+│   ├── (app)/                   # Protected app routes
+│   │   ├── layout.tsx           # App layout with sidebar
+│   │   ├── dashboard/           # Dashboard page
+│   │   ├── users/               # Users management
+│   │   ├── settings/            # Settings page
+│   │   ├── analytics/           # Analytics page
+│   │   ├── calendar/            # Calendar page
+│   │   ├── chat/                # Chat page
+│   │   └── ...                  # Other pages
+│   ├── auth/                    # Authentication routes
 │   │   ├── login/
 │   │   ├── register/
 │   │   └── forgot-password/
-│   └── layout.tsx          # Root layout
-├── modules/
-│   ├── auth/
-│   │   ├── components/
-│   │   ├── screen/
-│   │   ├── services/
-│   │   ├── state/
-│   │   └── types/
-│   ├── dashboard/
-│   │   ├── components/
-│   │   ├── screen/
-│   │   ├── services/
-│   │   └── types/
-│   ├── users/
-│   └── settings/
-├── components/
-│   ├── ui/
-│   ├── app-sidebar.tsx
-│   └── app-header.tsx
-└── lib/
-├── utils.ts
-└── navigation.ts
+│   ├── layout.tsx               # Root layout
+│   └── globals.css              # Global styles
+│
+├── modules/                      # Feature modules
+│   ├── auth/                    # Authentication module
+│   │   ├── components/          # Auth-specific components
+│   │   ├── services/            # Auth API services
+│   │   ├── state/               # Auth state management
+│   │   ├── types/               # Auth TypeScript types
+│   │   └── screen/              # Auth screen layouts
+│   │
+│   ├── dashboard/               # Dashboard module
+│   │   ├── components/          # Dashboard components
+│   │   ├── services/            # Dashboard services
+│   │   ├── types/               # Dashboard types
+│   │   └── screen/              # Dashboard screens
+│   │
+│   ├── users/                   # Users module
+│   │   ├── components/          # User components
+│   │   ├── services/            # User services
+│   │   ├── types/               # User types
+│   │   └── screen/              # User screens
+│   │
+│   └── settings/                # Settings module
+│       ├── components/          # Settings components
+│       ├── types/               # Settings types
+│       └── screen/              # Settings screens
+│
+├── components/                   # Shared components
+│   ├── ui/                      # shadcn/ui components
+│   ├── app-sidebar.tsx          # Main sidebar navigation
+│   ├── app-header.tsx           # App header
+│   └── theme-provider.tsx       # Theme context provider
+│
+├── lib/                         # Utilities and helpers
+│   ├── navigation.ts            # Navigation configuration
+│   └── utils.ts                 # Utility functions
+│
+└── public/                      # Static assets
+\`\`\`
 
-````
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18.17 or later
+- **npm**, **yarn**, or **pnpm**
+
+### Installation
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/yourusername/enterprise-app-template.git
+   cd enterprise-app-template
+   \`\`\`
+
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   \`\`\`
+
+3. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   \`\`\`
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### First Steps
+
+1. **Explore the authentication flow** at `/auth/login`
+2. **View the dashboard** at `/dashboard`
+3. **Check out the modular structure** in the `modules/` folder
+4. **Customize the theme** in `app/globals.css`
+
+---
+
+## 🏛️ Architecture
+
+### Design Principles
+
+1. **Separation of Concerns** – Each module handles its own logic
+2. **Single Responsibility** – Components do one thing well
+3. **DRY (Don't Repeat Yourself)** – Reusable components and utilities
+4. **Type Safety** – TypeScript for catching errors early
+5. **Scalability** – Easy to add new features without breaking existing code
+
+### Key Patterns
+
+- **Module Pattern** – Feature-based organization
+- **Service Layer** – API calls separated from components
+- **Context API** – Global state management
+- **Compound Components** – Flexible, composable UI
+- **Custom Hooks** – Reusable logic extraction
 
 ---
 
 ## 🧩 Module Pattern
 
-Each module follows a consistent, scalable structure:
+Each module follows a consistent structure:
 
-| Folder | Purpose |
-|--------|----------|
-| `types/` | TypeScript interfaces and data models |
-| `services/` | API calls and business logic |
-| `state/` | Context or hooks for state management |
-| `components/` | Reusable UI components |
-| `screen/` | Page-level components and layouts |
+\`\`\`
+modules/[module-name]/
+├── components/          # Module-specific components
+├── services/           # API calls and data fetching
+├── state/              # State management (Context, hooks)
+├── types/              # TypeScript interfaces and types
+└── screen/             # Page-level components
+\`\`\`
+
+### Creating a New Module
+
+1. **Create the module folder**
+   \`\`\`bash
+   mkdir -p modules/my-feature/{components,services,state,types,screen}
+   \`\`\`
+
+2. **Define types**
+   \`\`\`typescript
+   // modules/my-feature/types/index.ts
+   export interface MyFeature {
+     id: string;
+     name: string;
+     // ... other fields
+   }
+   \`\`\`
+
+3. **Create services**
+   \`\`\`typescript
+   // modules/my-feature/services/my-feature-service.ts
+   export const myFeatureService = {
+     getAll: async () => { /* ... */ },
+     getById: async (id: string) => { /* ... */ },
+     // ... other methods
+   }
+   \`\`\`
+
+4. **Build components**
+   \`\`\`tsx
+   // modules/my-feature/components/my-component.tsx
+   export function MyComponent() {
+     // Component logic
+   }
+   \`\`\`
+
+5. **Create screen**
+   \`\`\`tsx
+   // modules/my-feature/screen/my-feature-screen.tsx
+   export function MyFeatureScreen() {
+     // Screen composition
+   }
+   \`\`\`
+
+6. **Add route**
+   \`\`\`tsx
+   // app/(app)/my-feature/page.tsx
+   import { MyFeatureScreen } from '@/modules/my-feature/screen/my-feature-screen'
+   
+   export default function MyFeaturePage() {
+     return <MyFeatureScreen />
+   }
+   \`\`\`
 
 ---
 
-## ⚙️ Getting Started
+## 📜 Available Scripts
 
-### 1️⃣ Install dependencies
-```bash
-npm install
-````
-
-### 2️⃣ Start development server
-
-```bash
-npm run dev
-```
-
-### 3️⃣ Open the app
-
-Visit [http://localhost:3000](http://localhost:3000)
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run type-check` | Run TypeScript compiler check |
 
 ---
 
-## 🔐 Authentication Setup
+## 🛠️ Tech Stack
 
-This template includes a **mock authentication system**.
-To connect a real backend:
+### Core
+- **[Next.js 15](https://nextjs.org/)** – React framework with App Router
+- **[React 18](https://react.dev/)** – UI library
+- **[TypeScript](https://www.typescriptlang.org/)** – Type safety
 
-1. Update `modules/auth/services/auth-service.ts` with your real API endpoints
-2. Replace `localStorage` with secure token storage (e.g. cookies or secure store)
-3. Implement proper session and refresh token management
+### Styling
+- **[Tailwind CSS 4](https://tailwindcss.com/)** – Utility-first CSS
+- **[shadcn/ui](https://ui.shadcn.com/)** – Component library
+- **[Radix UI](https://www.radix-ui.com/)** – Unstyled, accessible components
+- **[Lucide Icons](https://lucide.dev/)** – Icon library
 
----
+### Data Visualization
+- **[Recharts](https://recharts.org/)** – Chart library
 
-## 🧱 Adding a New Module
+### State Management
+- **React Context API** – Global state
+- **React Hooks** – Local state and effects
 
-1. Create a new directory under `modules/`
-2. Add the standard folders:
-
-   ```
-   types/, services/, state/, components/, screen/
-   ```
-3. Define your types in `types/index.ts`
-4. Implement services in `services/`
-5. Build your components and screens
-6. Add corresponding routes in `app/(app)/`
+### Development
+- **ESLint** – Code linting
+- **Prettier** – Code formatting
+- **TypeScript** – Static type checking
 
 ---
 
 ## 🎨 Customization
 
-### 🌈 Theme
+### Theme
 
-Edit `app/globals.css` or `tailwind.config.ts` to customize color tokens and branding.
+Edit `app/globals.css` to customize colors:
 
-### 🧭 Navigation
+\`\`\`css
+@theme inline {
+  /* Light mode colors */
+  --color-background: 0 0% 100%;
+  --color-foreground: 222.2 84% 4.9%;
+  --color-primary: 346.8 77.2% 49.8%;
+  
+  /* Dark mode colors */
+  .dark {
+    --color-background: 222.2 84% 4.9%;
+    --color-foreground: 210 40% 98%;
+  }
+}
+\`\`\`
 
-Modify `lib/navigation.ts` to add or reorder sidebar items.
+### Navigation
 
-### 🧩 Layout
+Edit `lib/navigation.ts` to add/remove sidebar items:
 
-Customize `components/app-sidebar.tsx` and `components/app-header.tsx` for layout and design tweaks.
-
----
-
-## 🧠 Best Practices
-
-✔ Keep modules **independent** and **reusable**
-✔ Use **TypeScript** for type safety
-✔ Encapsulate **API logic** in services
-✔ Handle errors gracefully
-✔ Use **React Context or Zustand** for shared state
-✔ Keep components small, atomic, and well-typed
-
----
-
-## 🧰 Tech Stack
-
-| Category       | Technology              |
-| -------------- | ----------------------- |
-| **Framework**  | Next.js 15 (App Router) |
-| **Language**   | TypeScript              |
-| **Styling**    | Tailwind CSS v4         |
-| **UI Library** | shadcn/ui               |
-| **Charts**     | Recharts                |
-| **Icons**      | Lucide React            |
+\`\`\`typescript
+export const navigationItems = [
+  {
+    title: "My New Page",
+    href: "/my-new-page",
+    icon: MyIcon,
+  },
+  // ... other items
+]
+\`\`\`
 
 ---
 
-## 📜 License
+## 🤝 Contributing
 
-This project is licensed under the **MIT License**.
-You are free to use, modify, and distribute it with attribution.
+Contributions are welcome! Please follow these steps:
 
----
-
-## 💡 Author
-
-**Wilson Kumalo**
-🧑‍💻 Full Stack Developer • AI & Systems Architect
-🌐 [Portfolio Website](https://wilsonkumalo.vercel.app) | 💼 [LinkedIn](https://www.linkedin.com/in/wilson-kumalo-733550243/) | 🐙 [GitHub](https://github.com/KumaloWilson)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
-```
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) team for the amazing framework
+- [shadcn](https://twitter.com/shadcn) for the beautiful component library
+- [Vercel](https://vercel.com/) for hosting and deployment platform
+
+---
+
+## 📧 Support
+
+For support, email support@example.com or open an issue on GitHub.
+
+---
+
+<div align="center">
+
+**[⬆ back to top](#-enterprise-app-template)**
+
+Made with ❤️ by [Your Name](https://github.com/yourusername)
+
+</div>

@@ -415,6 +415,6 @@ For support, email kumalowilson900@gmail.com or open an issue on GitHub.
 
 **[⬆ back to top](#-enterprise-app-template)**
 
-Made with ❤️ by [Your Name](https://github.com/KumaloWilson)
+Made with ❤️ by [Wilson Kumalo](https://github.com/KumaloWilson)
 
 </div>

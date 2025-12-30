@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { AppSidebar } from "@/components/app-sidebar"
 import { AppHeader } from "@/components/app-header"
@@ -13,16 +13,18 @@ export default function AppLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [hasHydrated, setHasHydrated] = useState(false)
   const { isAuthenticated, isLoading } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
+    setHasHydrated(true)
     if (!isLoading && !isAuthenticated) {
       router.push("/auth/login")
     }
   }, [isAuthenticated, isLoading, router])
 
-  if (isLoading) {
+  if (!hasHydrated || isLoading) {
     return (
       <div className="flex h-screen items-center justify-center">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
